@@ -30,9 +30,25 @@
     <h1 class="h1">Hologram leaderboard generator</h1>
     <div class="limit">
         This page was made to make it easier to generate leaderboards
+        <br>
+        <br>
+
+        Header
+        <textarea class="textarea" rows="" placeholder="&6=== &eThe best leaderboard &6===" bind:value={header}></textarea>
+        <br>
+        Row format
+        <input class="textarea" type="text" bind:value={format}>
+        <br>
+        Footer
+        <textarea class="textarea" rows="" placeholder="&6=== &eThe best leaderboard &6===" bind:value={footer}></textarea>
+
+        <br>
+        <br>
 
         <RangeSlider bind:value={number} step={1} max={20} min={5}/>
         <input type="number" class="input w-16" bind:value={number}>
+
+
     </div>
     <br>
     <Hologram text={header + "\n" + lines.join("\n") + "\n" + footer}/>
