@@ -1,6 +1,6 @@
 
 export function parseColors(s: string) {
-    let correctedString = s.replace(/<(color:)?#([0-9a-f]{6})>/g, "&#$2")
+    let correctedString = s.replace(/<(color:)?#([0-9a-f]{6})>/g, "&§#$2")
     const colorParts = correctedString.split(/[&§]/);
     for (let i in colorParts) {
         let colorPart = colorParts[i];
